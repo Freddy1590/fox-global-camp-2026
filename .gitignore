@@ -1,0 +1,17 @@
+# macOS
+.DS_Store
+
+# 사용 안 하는 사진 (마케팅용 아닌 원본)
+photos/삭제*.jpg
+
+# 큰 백업 zip 파일
+*.zip
+
+# 에디터 설정
+.vscode/
+.idea/
+*.swp
+
+# 환경 변수
+.env
+.env.local
