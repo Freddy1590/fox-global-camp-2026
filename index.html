@@ -377,7 +377,7 @@
               <p class="text-xs font-extrabold text-amber-700">DAY 3</p>
               <p class="text-sm font-bold text-slate-700">6월 18일 (목)</p>
             </div>
-            <span class="ml-auto text-[10px] font-bold px-2 py-1 rounded-full bg-amber-50 text-amber-700 border border-amber-100">센터·외부</span>
+            <span class="ml-auto text-[10px] font-bold px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-100">공식+자유</span>
           </div>
           <h3 class="text-lg md:text-xl font-black text-brand-ink keep-all leading-snug">SEL 활동 : 마음을 정리하고 표현하는 날</h3>
         </div>
@@ -392,7 +392,7 @@
               <p class="text-xs font-extrabold text-amber-700">DAY 4</p>
               <p class="text-sm font-bold text-slate-700">6월 19일 (금)</p>
             </div>
-            <span class="ml-auto text-[10px] font-bold px-2 py-1 rounded-full bg-amber-50 text-amber-700 border border-amber-100">외부</span>
+            <span class="ml-auto text-[10px] font-bold px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-100">공식+자유</span>
           </div>
           <h3 class="text-lg md:text-xl font-black text-brand-ink keep-all leading-snug">한국 야구 응원문화 체험</h3>
         </div>
@@ -935,8 +935,9 @@
           <span id="modal-location"></span>
         </p>
         <div>
-          <p class="text-[11px] font-extrabold uppercase tracking-widest text-brand-sky mb-3">시간대별 일정</p>
-          <ul id="modal-schedule" class="divide-y divide-slate-100"></ul>
+          <p class="text-[11px] font-extrabold uppercase tracking-widest text-brand-sky mb-1">시간대별 일정</p>
+          <p class="text-xs text-slate-500 keep-all leading-relaxed mb-4">캠프 공식 일정과 자유 일정을 구분해 확인할 수 있습니다.</p>
+          <div id="modal-schedule" class="space-y-4"></div>
         </div>
         <div id="modal-note" class="mt-5 rounded-xl bg-amber-50 border border-amber-200 p-3 items-start gap-2" style="display: none;">
           <iconify-icon icon="solar:info-circle-bold" width="18" class="text-amber-600 shrink-0 mt-0.5"></iconify-icon>
@@ -1075,7 +1076,7 @@
     3: {
       date: '6월 18일 (목)',
       title: 'SEL 활동 : 마음을 정리하고 표현하는 날',
-      type: '센터·외부', typeColor: 'amber', photo: 'photos/day3.jpg',
+      type: '공식+자유', typeColor: 'amber', photo: 'photos/day3.jpg',
       location: '폭스러닝센터 → 신세계 Art & Science',
       schedule: [
         {
@@ -1113,14 +1114,21 @@
         },
         { time: '16:00 ~ 16:30', activity: '간식' },
         { time: '16:30 ~ 18:00', activity: '센터 활동 (미술)' },
-        { time: '18:00 이후', activity: 'Daily Talk · 신세계 Art & Science 자유일정', alpha: true },
+        {
+          time: '18:00 이후',
+          activity: '신세계 Art & Science 자유일정',
+          category: 'free',
+          details: [
+            'Daily Talk 진행',
+          ],
+        },
       ],
-      note: '이날 활동은 SEL 활동과 센터 미술 활동을 중심으로 진행하며, Daily Talk는 신세계 Art & Science 자유일정으로 이어집니다.',
+      note: '캠프 공식 일정 후 신세계 Art & Science 자유일정이 이어집니다. 자유 일정의 이동 및 참여 방식은 추후 안내드립니다.',
     },
     4: {
       date: '6월 19일 (금)',
       title: '한국 야구 응원문화 체험',
-      type: '외부', typeColor: 'amber', photo: 'photos/day4.jpg',
+      type: '공식+자유', typeColor: 'amber', photo: 'photos/day4.jpg',
       location: '폭스러닝센터 → 한화볼파크',
       schedule: [
         { time: '15:00 ~ 15:15', activity: '오리엔테이션' },
@@ -1128,8 +1136,15 @@
         { time: '15:55 ~ 16:20', activity: 'ESL · 미국 선생님 진행' },
         { time: '16:20 ~ 16:50', activity: '간식' },
         { time: '16:50 ~ 17:30', activity: '야구장 이동 (대중교통)' },
-        { time: '17:30 ~ 18:30', activity: '한국 야구 응원문화 체험 및 간식 주문하기' },
-        { time: '18:30 ~ 21:30', activity: '야구 관람' },
+        {
+          time: '17:30 ~ 21:30',
+          activity: '한화볼파크 야구 경기 관람',
+          category: 'free',
+          details: [
+            '응원문화 체험',
+            '간식 주문하기',
+          ],
+        },
         { time: '21:30 ~ 22:10', activity: '폭스러닝센터 복귀 (대중교통)' },
       ],
       note: '야구 티켓은 캠프비에 포함되지 않으며, 좌석 배치는 추후 일괄 안내드립니다.',
@@ -1184,30 +1199,72 @@
     modalType.textContent = data.type;
     modalLocation.textContent = data.location || '';
 
+    const typeLabelClass = data.type === '공식+자유'
+      ? 'bg-emerald-50 text-emerald-700 border border-emerald-100'
+      : data.typeColor === 'amber'
+        ? 'bg-amber-50 text-amber-700 border border-amber-100'
+        : 'bg-sky-50 text-brand-sky border border-sky-100';
+
+    modalType.className = `ml-auto text-[10px] font-bold px-2 py-1 rounded-full ${typeLabelClass}`;
+
     if (data.typeColor === 'amber') {
-      modalType.className = 'ml-auto text-[10px] font-bold px-2 py-1 rounded-full bg-amber-50 text-amber-700 border border-amber-100';
       modalBadge.className = 'inline-flex items-center justify-center w-11 h-11 rounded-full bg-brand-sun text-brand-ink font-black text-sm';
       modalDayNum.className = 'text-xs font-extrabold text-amber-700';
     } else {
-      modalType.className = 'ml-auto text-[10px] font-bold px-2 py-1 rounded-full bg-sky-50 text-brand-sky border border-sky-100';
       modalBadge.className = 'inline-flex items-center justify-center w-11 h-11 rounded-full bg-brand-sky text-white font-black text-sm';
       modalDayNum.className = 'text-xs font-extrabold text-brand-sky';
     }
 
-    modalScheduleEl.innerHTML = data.schedule.map(item => {
+    const renderScheduleItem = (item, category) => {
       const isAccent = item.alpha || item.highlight;
+      const isFree = category === 'free';
+      const itemClass = isFree ? 'bg-emerald-50/70 -mx-2 px-2 rounded-lg' : (isAccent ? 'bg-brand-cream/60 -mx-2 px-2 rounded-lg' : '');
+      const timeClass = isFree ? 'text-emerald-700' : (isAccent ? 'text-amber-700' : 'text-brand-sky');
+      const textClass = isFree ? 'text-emerald-950 font-bold' : (isAccent ? 'text-brand-ink font-bold' : 'text-slate-700');
+      const detailsClass = isFree ? 'text-emerald-900/80' : (isAccent ? 'text-brand-ink/80' : 'text-slate-600');
       const details = item.details ? `
-            <ul class="mt-2 space-y-1 text-xs md:text-sm ${isAccent ? 'text-brand-ink/80' : 'text-slate-600'}">
+            <ul class="mt-2 space-y-1 text-xs md:text-sm ${detailsClass}">
               ${item.details.map(detail => `<li class="keep-all">· ${detail}</li>`).join('')}
             </ul>
           ` : '';
       return `
-        <li class="flex flex-col sm:flex-row gap-1 sm:gap-4 py-3 ${isAccent ? 'bg-brand-cream/60 -mx-2 px-2 rounded-lg' : ''}">
-          <span class="text-xs font-extrabold ${isAccent ? 'text-amber-700' : 'text-brand-sky'} shrink-0 sm:w-28 tracking-wide">${item.time}</span>
-          <span class="text-sm md:text-base ${isAccent ? 'text-brand-ink font-bold' : 'text-slate-700'} keep-all">${item.activity}${details}</span>
+        <li class="flex flex-col sm:flex-row gap-1 sm:gap-4 py-3 ${itemClass}">
+          <span class="text-xs font-extrabold ${timeClass} shrink-0 sm:w-28 tracking-wide">${item.time}</span>
+          <span class="text-sm md:text-base ${textClass} keep-all">${item.activity}${details}</span>
         </li>
       `;
-    }).join('');
+    };
+
+    const scheduleGroups = [
+      {
+        id: 'official',
+        title: '캠프 공식 일정',
+        description: '폭스가 운영하는 활동입니다.',
+        badgeClass: 'bg-brand-sky text-white',
+        borderClass: 'border-sky-100',
+        items: data.schedule.filter(item => (item.category || 'official') === 'official'),
+      },
+      {
+        id: 'free',
+        title: '자유 일정',
+        description: '참여 방식과 이동 안내는 별도로 전달드립니다.',
+        badgeClass: 'bg-emerald-600 text-white',
+        borderClass: 'border-emerald-100',
+        items: data.schedule.filter(item => item.category === 'free'),
+      },
+    ].filter(group => group.items.length);
+
+    modalScheduleEl.innerHTML = scheduleGroups.map(group => `
+      <section class="rounded-2xl border ${group.borderClass} bg-white p-4">
+        <div class="flex flex-wrap items-center gap-2 mb-2">
+          <span class="inline-flex items-center px-2.5 py-1 rounded-full ${group.badgeClass} text-[11px] font-extrabold tracking-widest">${group.title}</span>
+          <p class="text-xs text-slate-500 keep-all">${group.description}</p>
+        </div>
+        <ul class="divide-y divide-slate-100">
+          ${group.items.map(item => renderScheduleItem(item, group.id)).join('')}
+        </ul>
+      </section>
+    `).join('');
 
     if (data.note) {
       modalNote.style.display = 'flex';
