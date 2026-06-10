@@ -264,7 +264,7 @@
             ESL 활동
           </h3>
           <p class="text-white/85 keep-all leading-relaxed">
-            미국 선생님과 함께 <strong class="text-white">Learning Upgrade</strong>로 매일 짧게 영어 표현을 익히고, 미국 친구와의 활동 속에서 직접 사용해봅니다.
+            미국 연구원과 함께 <strong class="text-white">Learning Upgrade</strong>로 매일 짧게 영어 표현을 익히고, 미국 친구와의 활동 속에서 직접 사용해봅니다.
           </p>
         </div>
       </article>
@@ -329,7 +329,7 @@
         5일간 함께하는<br /><span class="underline-sun">FOX 글로벌 교류 일정</span>
       </h2>
       <p class="text-lg text-slate-600 keep-all leading-relaxed">
-        첫 만남부터 부여 발굴체험, SEL 중심 활동, 야구 관람 선택 활동, 공주 필드트립까지 이어지는 5일 과정입니다.
+        첫 만남부터 부여 발굴체험, SEL 중심 활동, 야구 관람 선택 활동, 전주 필드트립까지 이어지는 5일 과정입니다.
       </p>
     </div>
 
@@ -359,7 +359,10 @@
               <p class="text-xs font-extrabold text-amber-700">DAY 2</p>
               <p class="text-sm font-bold text-slate-700">6월 17일 (수)</p>
             </div>
-            <span class="ml-auto text-[10px] font-bold px-2 py-1 rounded-full bg-amber-50 text-amber-700 border border-amber-100">외부</span>
+            <div class="ml-auto flex flex-wrap justify-end gap-1.5">
+              <span class="text-[10px] font-bold px-2 py-1 rounded-full bg-amber-50 text-amber-700 border border-amber-100">외부</span>
+              <span class="text-[10px] font-bold px-2 py-1 rounded-full bg-sky-50 text-brand-sky border border-sky-100">센터</span>
+            </div>
           </div>
           <h3 class="text-xl md:text-2xl font-black text-brand-ink keep-all leading-snug">폭스 발굴단 : 사라진 백제의 이야기를 찾아라</h3>
         </div>
@@ -405,7 +408,7 @@
       </article>
 
       <article class="rounded-[28px] bg-white border border-slate-200 overflow-hidden shadow-soft hover:shadow-card hover:-translate-y-1 transition-all duration-300 reveal" style="animation-delay: 200ms;">
-        <img src="photos/day5.jpg" alt="Day 5 공주 전통 문화 필드트립" class="w-full aspect-[4/3] object-cover" loading="lazy" />
+        <img src="photos/day5.jpg" alt="Day 5 전주 전통 문화 필드트립" class="w-full aspect-[4/3] object-cover" loading="lazy" />
         <div class="p-6">
           <div class="flex items-center gap-2.5 mb-2.5">
             <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-brand-sun text-brand-ink font-black text-sm">D5</span>
@@ -413,9 +416,12 @@
               <p class="text-xs font-extrabold text-amber-700">DAY 5</p>
               <p class="text-sm font-bold text-slate-700">6월 20일 (토)</p>
             </div>
-            <span class="ml-auto text-[10px] font-bold px-2 py-1 rounded-full bg-amber-50 text-amber-700 border border-amber-100">외부</span>
+            <div class="ml-auto flex flex-wrap justify-end gap-1.5">
+              <span class="text-[10px] font-bold px-2 py-1 rounded-full bg-amber-50 text-amber-700 border border-amber-100">외부</span>
+              <span class="text-[10px] font-bold px-2 py-1 rounded-full bg-sky-50 text-brand-sky border border-sky-100">센터</span>
+            </div>
           </div>
-          <h3 class="text-lg md:text-xl font-black text-brand-ink keep-all leading-snug">공주 전통 문화 필드트립</h3>
+          <h3 class="text-lg md:text-xl font-black text-brand-ink keep-all leading-snug">전주 전통 문화 필드트립</h3>
         </div>
       </article>
     </div>
@@ -709,7 +715,7 @@
             </li>
             <li class="flex items-center gap-2.5 text-sm">
               <span class="inline-flex w-7 h-7 rounded-full bg-sky-100 text-brand-sky items-center justify-center text-xs font-black shrink-0">20</span>
-              <span class="font-semibold text-slate-700 keep-all">토요일 · 공주 필드트립</span>
+              <span class="font-semibold text-slate-700 keep-all">토요일 · 전주 필드트립</span>
             </li>
           </ul>
         </div>
@@ -1032,24 +1038,72 @@
       typeLabels: ['센터'],
       location: '폭스러닝센터',
       schedule: [
-        { time: '15:00 ~ 15:20', activity: '오리엔테이션' },
-        { time: '15:20 ~ 16:00', activity: 'Learning Upgrade' },
-        { time: '16:00 ~ 16:20', activity: '간식' },
-        { time: '16:20 ~ 16:45', activity: 'ESL · 미국 선생님 진행' },
-        { time: '16:45 ~ 18:30', activity: '나를 소개하는 포스터 만들기' },
-        { time: '18:30 ~ 19:30', activity: 'Daily Talk · 미국 연구원 진행', alpha: true },
+        { time: '13:30 ~ 14:00', activity: '오리엔테이션' },
+        {
+          time: '14:00 ~ 14:15',
+          activity: 'Stone Ranch 학생 및 학부모 오리엔테이션',
+          details: [
+            'FOX에서 진행',
+          ],
+        },
+        {
+          time: '14:15 ~ 14:45',
+          activity: '아이스브레이킹 활동',
+          details: [
+            'SEL Neural Web 활동',
+            '1라운드: 자기 이름 공유하기',
+            '2라운드: 서로의 이름 기억하기',
+          ],
+        },
+        {
+          time: '14:45 ~ 15:30',
+          activity: '미국 연구원 진행 SEL 활동',
+          details: [
+            'Light in My Life 활동',
+          ],
+        },
+        {
+          time: '15:30 ~ 16:00',
+          activity: 'Stone Ranch 학생 발표',
+          details: [
+            'Girl Scouts & Boy Scouts 소개 발표',
+          ],
+        },
+        { time: '16:00 ~ 16:30', activity: '간식' },
+        {
+          time: '16:30 ~ 17:15',
+          activity: '영어 ESL 활동',
+          highlight: true,
+          details: [
+            'Learning Upgrade',
+            '스펠링 B 활동',
+            '세부 활동: Spelling 2a',
+            '과정: English 2 #18',
+          ],
+        },
+        {
+          time: '17:15 ~ 18:45',
+          activity: '부채 만들기',
+          details: [
+            'FOX Activities (Art)',
+            '한국의 전통 부채와 동양화의 특징 알아보기',
+            '매화와 대나무 등 한국적인 소재 활용',
+            '나만의 부채 완성',
+          ],
+        },
       ],
     },
     2: {
       date: '6월 17일 (수)',
       title: '폭스 발굴단 : 사라진 백제의 이야기를 찾아라',
       type: '외부', typeColor: 'amber', photo: 'photos/day2.jpg',
-      typeLabels: ['외부'],
+      typeLabels: ['외부', '센터'],
+      defaultCategory: 'external',
       location: '폭스러닝센터 → 부여 관북리유적 → 폭스러닝센터',
       schedule: [
-        { time: '12:40', activity: '폭스러닝센터 출발' },
+        { time: '13:10', activity: '폭스러닝센터 출발' },
         {
-          time: '14:00 ~ 16:00',
+          time: '14:30 ~ 16:30',
           activity: '부여 발굴체험',
           highlight: true,
           details: [
@@ -1061,18 +1115,21 @@
             '팝업북 만들기',
           ],
         },
-        { time: '16:00 ~ 17:00', activity: '폭스러닝센터 복귀' },
+        { time: '16:30 ~ 17:30', activity: '폭스러닝센터 복귀' },
+        { time: '17:30 ~ 18:00', activity: '간식 시간', category: 'center' },
         {
-          time: '17:00 ~ 17:45',
+          time: '18:00 ~ 18:45',
           activity: 'SEL 활동',
+          category: 'center',
           details: [
-            'US Teacher · SEL Calming Jar Activity',
-            'SRES 교사 · SEL 활동',
+            '미국 연구원 · SEL Calming Jar Activity',
+            'SRES 연구원 · SEL 활동',
           ],
         },
         {
-          time: '17:45 ~ 19:00',
+          time: '18:45 ~ 20:00',
           activity: '그룹별 센터 활동',
+          category: 'center',
           alpha: true,
           details: [
             '센터 활동 (AI)',
@@ -1081,7 +1138,7 @@
           ],
         },
       ],
-      note: '부여 발굴체험 후 폭스러닝센터로 복귀하여 SEL 활동과 그룹별 센터 활동을 진행합니다.',
+      note: '부여 발굴체험 후 폭스러닝센터로 복귀하여 간식, SEL 활동, 그룹별 센터 활동을 진행합니다.',
     },
     3: {
       date: '6월 18일 (목)',
@@ -1191,25 +1248,47 @@
     },
     5: {
       date: '6월 20일 (토)',
-      title: '공주 전통 문화 필드트립',
+      title: '전주 전통 문화 필드트립',
       type: '외부', typeColor: 'amber', photo: 'photos/day5.jpg',
-      typeLabels: ['외부'],
-      location: '폭스러닝센터 → 마곡사 → 유구 수국정원 → 제민천 → 폭스러닝센터',
+      typeLabels: ['외부', '센터'],
+      defaultCategory: 'external',
+      location: '폭스러닝센터 → 전주 한옥마을 → 완판본문화관 → 전주난장 → 경기전 → 폭스러닝센터',
       schedule: [
-        { time: '09:00 ~ 09:20', activity: '오리엔테이션' },
-        { time: '09:20 ~ 10:30', activity: '공주 마곡사 이동' },
-        { time: '10:30 ~ 11:30', activity: '마곡사 탐방' },
-        { time: '11:30 ~ 12:00', activity: '점심 장소 이동' },
-        { time: '12:00 ~ 13:00', activity: '점심 식사' },
-        { time: '13:00 ~ 13:30', activity: '유구 수국정원 이동' },
-        { time: '13:30 ~ 14:30', activity: '유구 수국정원 산책 및 버디 사진 미션' },
-        { time: '14:30 ~ 15:00', activity: '제민천 일대 이동' },
-        { time: '15:00 ~ 15:40', activity: '제민천 지역문화 탐방' },
-        { time: '15:40 ~ 16:50', activity: '폭스러닝센터 복귀' },
-        { time: '16:50 ~ 17:20', activity: '친구에게 마음을 전하는 편지 쓰기' },
-        { time: '17:20 ~ 18:00', activity: '수료식', highlight: true },
+        { time: '09:00 ~ 09:15', activity: '오리엔테이션' },
+        { time: '09:15 ~ 10:30', activity: '전주 한옥마을 이동' },
+        {
+          time: '10:45 ~ 11:30',
+          activity: '전통 만들기 체험',
+          highlight: true,
+          details: [
+            '옛 책 만들기',
+            '완판본문화관',
+          ],
+        },
+        { time: '11:30 ~ 12:00', activity: '비빔밥 만들기 체험 장소 이동' },
+        { time: '12:00 ~ 13:00', activity: '전주 비빔밥 만들기 및 점심 식사' },
+        {
+          time: '13:00 ~ 14:00',
+          activity: '전주난장',
+          details: [
+            '근대사 유물자료 7만여 점을 테마별로 분류한 체험형 테마박물관',
+            '20세기 생활문화와 역사 속 삶의 지혜를 살펴보는 공간',
+          ],
+        },
+        { time: '14:00 ~ 14:30', activity: '한옥마을 탐방 및 버디 사진 미션' },
+        {
+          time: '14:30 ~ 15:30',
+          activity: '경기전 탐방',
+          details: [
+            '태조 이성계의 초상화 어진을 봉안하기 위해 1410년에 창건된 역사적 공간',
+            '전주한옥마을 중심에 위치한 전통 건축과 자연경관 탐방',
+          ],
+        },
+        { time: '15:40 ~ 17:00', activity: '폭스러닝센터 복귀' },
+        { time: '17:00 ~ 17:30', activity: '친구에게 마음을 전하는 편지', category: 'center' },
+        { time: '17:30 ~ 18:00', activity: '수료식', category: 'center', highlight: true },
       ],
-      note: '6월 수국 개화 및 우천 상황에 따라 동선이 일부 조정될 수 있습니다.',
+      note: '전주 한옥마을 일대 이동 상황 및 체험 예약 상황에 따라 동선이 일부 조정될 수 있습니다.',
     },
   };
 
@@ -1260,8 +1339,9 @@
     const renderScheduleItem = (item, category) => {
       const isAccent = item.alpha || item.highlight;
       const isFree = category === 'free';
+      const isExternal = category === 'external';
       const itemClass = isFree ? 'bg-emerald-50/70 -mx-2 px-2 rounded-lg' : (isAccent ? 'bg-brand-cream/60 -mx-2 px-2 rounded-lg' : '');
-      const timeClass = isFree ? 'text-emerald-700' : (isAccent ? 'text-amber-700' : 'text-brand-sky');
+      const timeClass = isFree ? 'text-emerald-700' : (isExternal || isAccent ? 'text-amber-700' : 'text-brand-sky');
       const textClass = isFree ? 'text-emerald-950 font-bold' : (isAccent ? 'text-brand-ink font-bold' : 'text-slate-700');
       const detailsClass = isFree ? 'text-emerald-900/80' : (isAccent ? 'text-brand-ink/80' : 'text-slate-600');
       const details = item.details ? `
@@ -1277,19 +1357,23 @@
       `;
     };
 
-    const officialScheduleLabel = typeLabels.includes('외부') && !typeLabels.includes('센터') ? '외부' : '센터';
-    const officialDescription = officialScheduleLabel === '외부'
-      ? '센터가 인솔하는 외부 공식 일정입니다.'
-      : '폭스러닝센터에서 진행하는 공식 일정입니다.';
-
+    const getScheduleCategory = (item) => item.category || data.defaultCategory || (data.type === '외부' ? 'external' : 'center');
     const scheduleGroups = [
       {
-        id: 'official',
-        title: `${officialScheduleLabel} 일정`,
-        description: officialDescription,
-        badgeClass: officialScheduleLabel === '외부' ? 'bg-brand-sun text-brand-ink' : 'bg-brand-sky text-white',
-        borderClass: officialScheduleLabel === '외부' ? 'border-amber-100' : 'border-sky-100',
-        items: data.schedule.filter(item => (item.category || 'official') === 'official'),
+        id: 'external',
+        title: '외부 일정',
+        description: '센터가 인솔하는 외부 공식 일정입니다.',
+        badgeClass: 'bg-brand-sun text-brand-ink',
+        borderClass: 'border-amber-100',
+        items: data.schedule.filter(item => getScheduleCategory(item) === 'external'),
+      },
+      {
+        id: 'center',
+        title: '센터 일정',
+        description: '폭스러닝센터에서 진행하는 공식 일정입니다.',
+        badgeClass: 'bg-brand-sky text-white',
+        borderClass: 'border-sky-100',
+        items: data.schedule.filter(item => getScheduleCategory(item) === 'center'),
       },
       {
         id: 'free',
@@ -1297,7 +1381,7 @@
         description: '센터 공식 일정 이후 희망자 별도 신청으로 참여하는 활동입니다. 간식·입장권·체험 시설 이용료 등 개인 결제가 필요합니다.',
         badgeClass: 'bg-emerald-600 text-white',
         borderClass: 'border-emerald-100',
-        items: data.schedule.filter(item => item.category === 'free'),
+        items: data.schedule.filter(item => getScheduleCategory(item) === 'free'),
       },
     ].filter(group => group.items.length);
 
