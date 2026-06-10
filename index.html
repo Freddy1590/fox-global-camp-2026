@@ -377,7 +377,10 @@
               <p class="text-xs font-extrabold text-amber-700">DAY 3</p>
               <p class="text-sm font-bold text-slate-700">6월 18일 (목)</p>
             </div>
-            <span class="ml-auto text-[10px] font-bold px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-100">센터+선택 활동</span>
+            <div class="ml-auto flex flex-wrap justify-end gap-1.5">
+              <span class="text-[10px] font-bold px-2 py-1 rounded-full bg-sky-50 text-brand-sky border border-sky-100">센터</span>
+              <span class="text-[10px] font-bold px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-100">선택 활동</span>
+            </div>
           </div>
           <h3 class="text-lg md:text-xl font-black text-brand-ink keep-all leading-snug">SEL 활동 : 마음을 정리하고 표현하는 날</h3>
         </div>
@@ -392,7 +395,10 @@
               <p class="text-xs font-extrabold text-amber-700">DAY 4</p>
               <p class="text-sm font-bold text-slate-700">6월 19일 (금)</p>
             </div>
-            <span class="ml-auto text-[10px] font-bold px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-100">센터+선택 활동</span>
+            <div class="ml-auto flex flex-wrap justify-end gap-1.5">
+              <span class="text-[10px] font-bold px-2 py-1 rounded-full bg-sky-50 text-brand-sky border border-sky-100">센터</span>
+              <span class="text-[10px] font-bold px-2 py-1 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-100">선택 활동</span>
+            </div>
           </div>
           <h3 class="text-lg md:text-xl font-black text-brand-ink keep-all leading-snug">영어로 배우고 표현하는 날 + 야구 경기 관람(선택)</h3>
         </div>
@@ -927,7 +933,9 @@
             <p id="modal-day-num" class="text-xs font-extrabold text-brand-sky">DAY 1</p>
             <p id="modal-date" class="text-sm font-bold text-slate-700">6월 16일 (화)</p>
           </div>
-          <span id="modal-type" class="ml-auto text-[10px] font-bold px-2 py-1 rounded-full bg-sky-50 text-brand-sky border border-sky-100">센터</span>
+          <div id="modal-type" class="ml-auto flex flex-wrap justify-end gap-1.5">
+            <span class="text-[10px] font-bold px-2 py-1 rounded-full bg-sky-50 text-brand-sky border border-sky-100">센터</span>
+          </div>
         </div>
         <h3 id="modal-title" class="text-2xl md:text-3xl font-black text-brand-ink keep-all leading-tight mb-2"></h3>
         <p class="text-sm font-bold text-slate-600 keep-all flex items-center gap-1.5 mb-6">
@@ -936,7 +944,7 @@
         </p>
         <div>
           <p class="text-[11px] font-extrabold uppercase tracking-widest text-brand-sky mb-1">시간대별 일정</p>
-          <p class="text-xs text-slate-500 keep-all leading-relaxed mb-4">캠프 공식 일정과 희망자 별도 신청 선택 활동을 구분해 확인할 수 있습니다.</p>
+          <p class="text-xs text-slate-500 keep-all leading-relaxed mb-4">센터·외부 일정과 선택 활동을 구분해 확인할 수 있습니다.</p>
           <div id="modal-schedule" class="space-y-4"></div>
         </div>
         <div id="modal-note" class="mt-5 rounded-xl bg-amber-50 border border-amber-200 p-3 items-start gap-2" style="display: none;">
@@ -1021,6 +1029,7 @@
       date: '6월 16일 (화)',
       title: '첫 만남과 자기소개 : 나를 표현하는 날',
       type: '센터', typeColor: 'sky', photo: 'photos/day1.jpg',
+      typeLabels: ['센터'],
       location: '폭스러닝센터',
       schedule: [
         { time: '15:00 ~ 15:20', activity: '오리엔테이션' },
@@ -1035,6 +1044,7 @@
       date: '6월 17일 (수)',
       title: '폭스 발굴단 : 사라진 백제의 이야기를 찾아라',
       type: '외부', typeColor: 'amber', photo: 'photos/day2.jpg',
+      typeLabels: ['외부'],
       location: '폭스러닝센터 → 부여 관북리유적 → 폭스러닝센터',
       schedule: [
         { time: '12:40', activity: '폭스러닝센터 출발' },
@@ -1076,7 +1086,8 @@
     3: {
       date: '6월 18일 (목)',
       title: 'SEL 활동 : 마음을 정리하고 표현하는 날',
-      type: '센터+선택 활동', typeColor: 'amber', photo: 'photos/day3.jpg',
+      type: '센터', typeColor: 'sky', photo: 'photos/day3.jpg',
+      typeLabels: ['센터', '선택 활동'],
       location: '폭스러닝센터 / 선택 활동: 신세계 Art & Science',
       schedule: [
         {
@@ -1131,7 +1142,8 @@
     4: {
       date: '6월 19일 (금)',
       title: '영어로 배우고 표현하는 날 + 야구 경기 관람(선택)',
-      type: '센터+선택 활동', typeColor: 'amber', photo: 'photos/day4.jpg',
+      type: '센터', typeColor: 'sky', photo: 'photos/day4.jpg',
+      typeLabels: ['센터', '선택 활동'],
       location: '폭스러닝센터 / 선택 활동: 한화볼파크',
       schedule: [
         {
@@ -1181,6 +1193,7 @@
       date: '6월 20일 (토)',
       title: '공주 전통 문화 필드트립',
       type: '외부', typeColor: 'amber', photo: 'photos/day5.jpg',
+      typeLabels: ['외부'],
       location: '폭스러닝센터 → 마곡사 → 유구 수국정원 → 제민천 → 폭스러닝센터',
       schedule: [
         { time: '09:00 ~ 09:20', activity: '오리엔테이션' },
@@ -1223,16 +1236,18 @@
     modalTitle.textContent = data.title;
     modalPhoto.src = data.photo;
     modalPhoto.alt = `Day ${day} ${data.title}`;
-    modalType.textContent = data.type;
     modalLocation.textContent = data.location || '';
 
-    const typeLabelClass = data.type.includes('선택 활동')
-      ? 'bg-emerald-50 text-emerald-700 border border-emerald-100'
-      : data.typeColor === 'amber'
-        ? 'bg-amber-50 text-amber-700 border border-amber-100'
-        : 'bg-sky-50 text-brand-sky border border-sky-100';
-
-    modalType.className = `ml-auto text-[10px] font-bold px-2 py-1 rounded-full ${typeLabelClass}`;
+    const typeLabels = data.typeLabels || [data.type];
+    const typeLabelClasses = {
+      '센터': 'bg-sky-50 text-brand-sky border border-sky-100',
+      '외부': 'bg-amber-50 text-amber-700 border border-amber-100',
+      '선택 활동': 'bg-emerald-50 text-emerald-700 border border-emerald-100',
+    };
+    modalType.className = 'ml-auto flex flex-wrap justify-end gap-1.5';
+    modalType.innerHTML = typeLabels.map(label => `
+      <span class="text-[10px] font-bold px-2 py-1 rounded-full ${typeLabelClasses[label] || typeLabelClasses['센터']}">${label}</span>
+    `).join('');
 
     if (data.typeColor === 'amber') {
       modalBadge.className = 'inline-flex items-center justify-center w-11 h-11 rounded-full bg-brand-sun text-brand-ink font-black text-sm';
@@ -1262,19 +1277,24 @@
       `;
     };
 
+    const officialScheduleLabel = typeLabels.includes('외부') && !typeLabels.includes('센터') ? '외부' : '센터';
+    const officialDescription = officialScheduleLabel === '외부'
+      ? '센터가 인솔하는 외부 공식 일정입니다.'
+      : '폭스러닝센터에서 진행하는 공식 일정입니다.';
+
     const scheduleGroups = [
       {
         id: 'official',
-        title: '캠프 공식 일정',
-        description: '폭스가 운영하는 활동입니다.',
-        badgeClass: 'bg-brand-sky text-white',
-        borderClass: 'border-sky-100',
+        title: `${officialScheduleLabel} 일정`,
+        description: officialDescription,
+        badgeClass: officialScheduleLabel === '외부' ? 'bg-brand-sun text-brand-ink' : 'bg-brand-sky text-white',
+        borderClass: officialScheduleLabel === '외부' ? 'border-amber-100' : 'border-sky-100',
         items: data.schedule.filter(item => (item.category || 'official') === 'official'),
       },
       {
         id: 'free',
-        title: '희망자 별도 신청 선택 활동',
-        description: '센터 공식 일정 이후 선택 참여하는 활동입니다. 간식·입장권·체험 시설 이용료 등 개인 결제가 필요합니다.',
+        title: '선택 활동',
+        description: '센터 공식 일정 이후 희망자 별도 신청으로 참여하는 활동입니다. 간식·입장권·체험 시설 이용료 등 개인 결제가 필요합니다.',
         badgeClass: 'bg-emerald-600 text-white',
         borderClass: 'border-emerald-100',
         items: data.schedule.filter(item => item.category === 'free'),
