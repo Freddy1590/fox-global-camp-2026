@@ -1030,7 +1030,14 @@
       typeLabels: ['센터'],
       location: '폭스러닝센터',
       schedule: [
-        { time: '13:30 ~ 14:00', activity: '오리엔테이션' },
+        {
+          time: '13:30 ~ 14:00',
+          activity: '학생 도착 및 오리엔테이션',
+          details: [
+            '서로의 소개',
+            '오늘 활동 안내',
+          ],
+        },
         {
           time: '14:00 ~ 14:15',
           activity: 'Stone Ranch 학생 및 학부모 오리엔테이션',
@@ -1055,15 +1062,15 @@
           ],
         },
         {
-          time: '15:30 ~ 16:00',
-          activity: 'Stone Ranch 학생 발표',
+          time: '15:30 ~ 16:30',
+          activity: '문화교류 발표 활동',
           details: [
-            'Girl Scouts & Boy Scouts 소개 발표',
+            'Stone Ranch 학생 · Girl Scouts & Boy Scouts 소개 발표',
+            '한국 학생 문화 소개 발표',
           ],
         },
-        { time: '16:00 ~ 16:30', activity: '간식 시간' },
         {
-          time: '16:30 ~ 17:15',
+          time: '16:30 ~ 17:00',
           activity: '영어 ESL 활동',
           highlight: true,
           details: [
@@ -1073,14 +1080,23 @@
             '과정: English 2 #18',
           ],
         },
+        { time: '17:00 ~ 17:30', activity: '간식 시간' },
         {
-          time: '17:15 ~ 18:45',
+          time: '17:30 ~ 19:00',
           activity: '부채 만들기',
           details: [
             'FOX Activities (Art)',
             '한국의 전통 부채와 동양화의 특징 알아보기',
             '매화와 대나무 등 한국적인 소재 활용',
             '나만의 부채 완성',
+          ],
+        },
+        {
+          time: '19:00 ~ 19:30',
+          activity: 'Daily Talk',
+          alpha: true,
+          details: [
+            '오늘 만난 친구에게 남기는 한 문장',
           ],
         },
       ],
@@ -1111,20 +1127,20 @@
         { time: '17:30 ~ 18:00', activity: '간식 시간', category: 'center' },
         {
           time: '18:00 ~ 18:45',
-          activity: 'SEL 활동',
+          activity: '미국 연구원 진행 SEL 활동',
           category: 'center',
           details: [
-            '미국 연구원 · SEL Calming Jar Activity',
-            'SRES 연구원 · SEL 활동',
+            'Teamwork Makes the Dream Work 활동',
           ],
         },
         {
-          time: '18:45 ~ 20:00',
+          time: '18:45 ~ 19:30',
           activity: '그룹별 센터 활동',
           category: 'center',
           alpha: true,
           details: [
             '센터 활동 (AI)',
+            'Minecraft Education · Hour of Code: AI for Good',
             'Learning Upgrade English',
             'Daily Talk · Danica & Jared',
           ],
@@ -1161,16 +1177,15 @@
           time: '14:45 ~ 15:30',
           activity: '미국 연구원 진행 SEL 활동',
           details: [
-            'Teamwork Makes the Dream Work 활동',
+            'SEL Calming Jar Activity',
+            'SRES 연구원 · SEL 활동',
           ],
         },
         {
           time: '15:30 ~ 16:30',
-          activity: 'FOX Activities',
+          activity: 'FOX Activities (AI)',
           details: [
             'AI',
-            'SEL',
-            'ART',
           ],
         },
         {
@@ -1218,9 +1233,8 @@
           ],
         },
         { time: '15:30 ~ 16:00', activity: '한국 야구 문화 이해하기' },
-        { time: '16:00 ~ 16:30', activity: '간식 시간' },
         {
-          time: '16:30 이후',
+          time: '16:00 이후',
           activity: '한화볼파크 야구 경기 관람 선택 활동',
           category: 'free',
           details: [
@@ -1240,7 +1254,7 @@
           ],
         },
       ],
-      note: '캠프 공식 일정은 간식 시간(16:30)까지입니다.\n이후 야구 경기 관람 선택 활동 참여자는 연구원이 야구장까지 인솔하여 단체 입장합니다.',
+      note: '캠프 공식 일정은 한국 야구 문화 이해하기(16:00)까지입니다.\n이후 야구 경기 관람 선택 활동 참여자는 연구원이 야구장까지 인솔하여 단체 입장합니다.',
       footnote: '야구 경기는 경기 진행 상황에 따라 종료 시간이 달라질 수 있으며, 픽업 시간은 별도로 안내드릴 예정입니다.',
     },
     5: {
