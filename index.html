@@ -325,7 +325,7 @@
         5일간 함께하는<br /><span class="underline-sun">FOX 글로벌 교류 일정</span>
       </h2>
       <p class="text-lg text-slate-600 keep-all leading-relaxed">
-        첫 만남부터 부여 발굴체험, SEL 중심 활동, 야구 관람 선택 활동, 전통문화 필드트립까지 이어지는 5일 과정입니다.
+        첫 만남부터 부여 발굴체험, SEL 중심 활동, 야구 관람 선택 활동, 전주 필드트립까지 이어지는 5일 과정입니다.
       </p>
     </div>
 
@@ -404,7 +404,7 @@
       </article>
 
       <article class="rounded-[28px] bg-white border border-slate-200 overflow-hidden shadow-soft hover:shadow-card hover:-translate-y-1 transition-all duration-300 reveal" style="animation-delay: 200ms;">
-        <img src="photos/day5.jpg" alt="Day 5 전통문화 필드트립" class="w-full aspect-[4/3] object-cover" loading="lazy" />
+        <img src="photos/day5.jpg" alt="Day 5 전주 필드트립: 전주에서 나누는 한국의 맛과 멋" class="w-full aspect-[4/3] object-cover" loading="lazy" />
         <div class="p-6">
           <div class="flex items-center gap-2.5 mb-2.5">
             <span class="inline-flex items-center justify-center w-10 h-10 rounded-full bg-brand-sun text-brand-ink font-black text-sm">D5</span>
@@ -417,7 +417,7 @@
               <span class="text-[10px] font-bold px-2 py-1 rounded-full bg-sky-50 text-brand-sky border border-sky-100">센터</span>
             </div>
           </div>
-          <h3 class="text-lg md:text-xl font-black text-brand-ink keep-all leading-snug">전통문화 필드트립</h3>
+          <h3 class="text-lg md:text-xl font-black text-brand-ink keep-all leading-snug">전주 필드트립 : 전주에서 나누는 한국의 맛과 멋</h3>
         </div>
       </article>
     </div>
@@ -711,7 +711,7 @@
             </li>
             <li class="flex items-center gap-2.5 text-sm">
               <span class="inline-flex w-7 h-7 rounded-full bg-sky-100 text-brand-sky items-center justify-center text-xs font-black shrink-0">20</span>
-              <span class="font-semibold text-slate-700 keep-all">토요일 · 전통문화 필드트립</span>
+              <span class="font-semibold text-slate-700 keep-all">토요일 · 전주 필드트립</span>
             </li>
           </ul>
         </div>
@@ -1252,25 +1252,47 @@
     },
     5: {
       date: '6월 20일 (토)',
-      title: '전통문화 필드트립',
+      title: '전주 필드트립 : 전주에서 나누는 한국의 맛과 멋',
       type: '외부', typeColor: 'amber', photo: 'photos/day5.jpg',
       typeLabels: ['외부', '센터'],
       defaultCategory: 'external',
-      location: '장소: 공주 또는 전주 예정',
+      location: '폭스러닝센터 → 전주 한옥마을 → 완판본문화관 → 전주난장 → 경기전 → 폭스러닝센터',
       schedule: [
-        { time: '09:00 ~ 09:15' },
-        { time: '09:15 ~ 10:30' },
-        { time: '10:45 ~ 11:30' },
-        { time: '11:30 ~ 12:00' },
-        { time: '12:00 ~ 13:00' },
-        { time: '13:00 ~ 14:00' },
-        { time: '14:00 ~ 14:30' },
-        { time: '14:30 ~ 15:30' },
-        { time: '15:40 ~ 17:00' },
+        { time: '09:00 ~ 09:15', activity: '오리엔테이션' },
+        { time: '09:15 ~ 10:30', activity: '전주 한옥마을 이동' },
+        {
+          time: '10:45 ~ 11:30',
+          activity: '전통 만들기 체험',
+          highlight: true,
+          details: [
+            '옛 책 만들기',
+            '완판본문화관',
+          ],
+        },
+        { time: '11:30 ~ 12:00', activity: '비빔밥 만들기 체험 장소 이동' },
+        { time: '12:00 ~ 13:00', activity: '전주 비빔밥 만들기 및 점심 식사' },
+        {
+          time: '13:00 ~ 14:00',
+          activity: '전주난장',
+          details: [
+            '근대사 유물자료 7만여 점을 테마별로 분류한 체험형 테마박물관',
+            '20세기 생활문화와 역사 속 삶의 지혜를 살펴보는 공간',
+          ],
+        },
+        { time: '14:00 ~ 14:30', activity: '한옥마을 탐방 및 버디 사진 미션' },
+        {
+          time: '14:30 ~ 15:30',
+          activity: '경기전 탐방',
+          details: [
+            '태조 이성계의 초상화 어진을 봉안하기 위해 1410년에 창건된 역사적 공간',
+            '전주한옥마을 중심에 위치한 전통 건축과 자연경관 탐방',
+          ],
+        },
+        { time: '15:40 ~ 17:00', activity: '폭스러닝센터 복귀' },
         { time: '17:00 ~ 17:30', activity: '친구에게 마음을 전하는 편지', category: 'center' },
         { time: '17:30 ~ 18:00', activity: '수료식', category: 'center', highlight: true },
       ],
-      note: '토요일 외부 일정 장소는 공주 또는 전주로 조율 중이며, 확정 후 별도 안내드릴 예정입니다.',
+      note: '전주 한옥마을 일대 이동 상황 및 체험 예약 상황에 따라 동선이 일부 조정될 수 있습니다.',
     },
   };
 
